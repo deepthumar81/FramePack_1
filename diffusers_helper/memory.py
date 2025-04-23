@@ -2,7 +2,11 @@
 
 
 import torch
-
+# import torch
+torch.cuda.empty_cache()
+import gc
+# del variables
+gc.collect()
 
 cpu = torch.device('cpu')
 gpu = torch.device(f'cuda:{torch.cuda.current_device()}')
